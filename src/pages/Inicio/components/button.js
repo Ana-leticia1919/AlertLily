@@ -4,7 +4,7 @@ import {
     StyleSheet,
     TouchableOpacity,
 } from "react-native";
-import {useNavigation} from "@react-navigation/native"
+import {useNavigation} from "@react-navigation/native";
 
 
 function Button(props){

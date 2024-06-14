@@ -11,6 +11,8 @@ import {
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import Link from "../components/link";
+import Button from "../components/button";
 
 const schema = yup.object({
     email: yup.string().email("Email invalido").required("Informe seu email."),
@@ -31,8 +33,10 @@ function LoginList(props){
 
     return( 
         <ImageBackground source={require('../icones/plano-de-fundo.png')} style={styles.container}>
-            <View style={styles.wrapper}>
-                <Image source={require('../icones/logo.png')} style={styles.logo}/>
+
+            <Image source={require('../icones/logo.png')} style={styles.logo} elevetion={5}/>
+
+            <View style={styles.wrapper} >
 
                 <Controller
                     control={control}
@@ -68,13 +72,13 @@ function LoginList(props){
                 {errors.password && <Text style={styles.mensagemErro}>{errors.password?.message}</Text>}
 
                 <View style={styles.wrapperlinks}>
-                    <Text style={styles.links}>Lembre-me</Text>
-                    <Text style={styles.links}>Esquceu a senha?</Text>
+                    <Link text="Lembre-se de mim" link="Cadastro"/>
+                    <Link text="Esqueci a senha" link="Cadastro"/>
                 </View>
                 
-                <TouchableOpacity style={styles.btn} onPress={handleSubmit(handleSingIn)}>
-                    <Text style={styles.textBtn}>ENTRAR</Text>
-                </TouchableOpacity>
+                <Button text="ENTRAR" link="Perguntas"/>
+
+                <Link text="Não tem uma conta? cadastre-se já." link="Cadastro"/>
             </View>
         </ImageBackground>
     );
@@ -94,8 +98,8 @@ const styles = StyleSheet.create({
         alignItems:"center",
         justifyContent:"center",
         backgroundColor:"#F6F2FF",
-        height: 317,
-        width: 253,
+        height: 417,
+        width: 263,
         borderWidth: 5,
         borderColor: "#A081F8",
         borderRadius: 20,
@@ -103,6 +107,9 @@ const styles = StyleSheet.create({
     logo:{
         height: 148,
         width: 178,
+        position: 'absolute',
+        top: 197,
+        
     },
     input:{
         display: "flex",
@@ -130,26 +137,6 @@ const styles = StyleSheet.create({
     wrapperCheck:{
         justifyContent: "center",
         alignItems: "center",
-    },
-    links:{
-        color: "#A081F8",
-        fontSize: 10,
-        margin: 10,
-        marginBottom: 20,
-    },
-    btn:{
-        display: "flex",
-        alignItems:"center",
-        justifyContent:"center",
-        backgroundColor: "#510A88",
-        borderRadius: 100,
-        height: 48,
-        width: 196,
-        marginBottom: 130,
-    },
-    textBtn:{
-        fontSize: 18,
-        color: "#fff",
     },
 });
 

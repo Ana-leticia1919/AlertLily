@@ -7,7 +7,7 @@ import {
 import {useNavigation} from "@react-navigation/native";
 
 
-function Button(props){
+function Link(props){
     
     const navigation = useNavigation();
 
@@ -23,16 +23,13 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems:"center",
         justifyContent:"center",
-        backgroundColor: "#510A88",
-        borderRadius: 100,
-        height: 48,
-        width: 196,
-        marginBottom: 30,
     },
-    textBtn:{
-        fontSize: 18,
-        color: "#fff",
+    text:{
+        color: "#A081F8",
+        fontSize: 10,
+        margin: 10,
+        marginBottom: 20,
     },
 });
 
-export default Button;
+export default Link;

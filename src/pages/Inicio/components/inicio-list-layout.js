@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         backgroundColor:"#E8CDF9",
         //flex: 1,
-        height: 900,
+        height: "100%",
         
     },
     title:{
