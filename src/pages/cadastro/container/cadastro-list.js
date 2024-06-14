@@ -11,6 +11,7 @@ import {
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import {useNavigation} from "@react-navigation/native";
 
 const schema = yup.object({
     userName: yup.string().required("Informe seu nome."),
@@ -20,6 +21,8 @@ const schema = yup.object({
 });
 
 function CadastroList(props){
+
+    const navigation = useNavigation();
 
     const {control, handleSubmit, formState:{ errors } } = useForm ({
         resolver: yupResolver(schema)
@@ -106,7 +109,7 @@ function CadastroList(props){
                     <Text style={styles.textBtn}>CADASTRAR-SE</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.wrapperLink} onPress={props.onPress}>
+                <TouchableOpacity style={styles.wrapperLink} onPress={() => navigation.navigate("Perguntas")}>
                     <Text style={styles.link}>ENTRAR</Text>
                     <Image source={require('../icones/seta-direita.png')} style={styles.imgSeta}/>
                 </TouchableOpacity>
@@ -174,7 +177,7 @@ const styles = StyleSheet.create({
     },
     mensagemErro:{
         fontSize:15,
-        color: "#821919",
+        color: "#510A88",
     },
     wrapperLink:{
         flexDirection: "row",

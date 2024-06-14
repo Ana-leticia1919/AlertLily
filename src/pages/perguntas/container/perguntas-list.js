@@ -6,17 +6,19 @@ import {
     StyleSheet,
     ImageBackground,
     TouchableOpacity,
-    
 } from "react-native";
+import * as Animatable from "react-native-animatable";
+import {useNavigation} from "@react-navigation/native";
 
 function PerguntasList(props){
+
+    const navigation = useNavigation();
+
     return(
         <ImageBackground source={require('../icones/plano-de-fundo.png')} style={styles.container}>
-            <View style={styles.wrapper}>
-            
-                <Image source={require('../icones/logo.png')} style={styles.logo}/>
+            <Animatable.View style={styles.wrapper} animation={"fadeInUp"} duration={1000}>
 
-                <TouchableOpacity style={styles.btn} onPress={props.onPress}>
+                <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("SobreNos")}>
                     <Text style={styles.textBtn}>Sobre nós</Text>
                 </TouchableOpacity>
 
@@ -27,7 +29,9 @@ function PerguntasList(props){
                 <TouchableOpacity style={styles.btnG} onPress={props.onPress}>
                     <Text style={styles.textBtn}>Iniciar configurações</Text>
                 </TouchableOpacity>
-            </View>
+            </Animatable.View>
+
+            <Animatable.Image source={require('../icones/logo.png')} style={styles.logo} animation={"fadeInDown"} duration={1000}/>
         </ImageBackground>
     );
 }
@@ -51,10 +55,13 @@ const styles = StyleSheet.create({
         borderWidth: 5,
         borderColor: "#A081F8",
         borderRadius: 20,
+        paddingTop: 140,
     },
     logo:{
         height: 148,
         width: 178,
+        position: 'absolute',
+        top: 240,
     },
     btn:{
         display: "flex",

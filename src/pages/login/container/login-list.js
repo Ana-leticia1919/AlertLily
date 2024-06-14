@@ -13,6 +13,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import Link from "../components/link";
 import Button from "../components/button";
+import * as Animatable from "react-native-animatable";
 
 const schema = yup.object({
     email: yup.string().email("Email invalido").required("Informe seu email."),
@@ -34,9 +35,7 @@ function LoginList(props){
     return( 
         <ImageBackground source={require('../icones/plano-de-fundo.png')} style={styles.container}>
 
-            <Image source={require('../icones/logo.png')} style={styles.logo} elevetion={5}/>
-
-            <View style={styles.wrapper} >
+            <Animatable.View style={styles.wrapper} animation={"fadeInUp"} duration={1000}>
 
                 <Controller
                     control={control}
@@ -79,7 +78,9 @@ function LoginList(props){
                 <Button text="ENTRAR" link="Perguntas"/>
 
                 <Link text="Não tem uma conta? cadastre-se já." link="Cadastro"/>
-            </View>
+            </Animatable.View>
+
+            <Animatable.Image source={require('../icones/logo.png')} style={styles.logo} animation={"fadeInUp"} duration={1000}/>
         </ImageBackground>
     );
 }
@@ -103,12 +104,13 @@ const styles = StyleSheet.create({
         borderWidth: 5,
         borderColor: "#A081F8",
         borderRadius: 20,
+        paddingTop: 50,
     },
     logo:{
         height: 148,
         width: 178,
         position: 'absolute',
-        top: 197,
+        top: 193,
         
     },
     input:{

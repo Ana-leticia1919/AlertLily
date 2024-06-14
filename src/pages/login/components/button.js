@@ -27,11 +27,13 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         height: 48,
         width: 196,
-        marginBottom: 30,
+        marginBottom: 20,
+        marginTop: 10,
     },
-    textBtn:{
+    text:{
         fontSize: 18,
-        color: "#fff",
+        color: "#F6F2FF",
+        fontWeight: "bold",
     },
 });
 

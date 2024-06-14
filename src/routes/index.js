@@ -3,6 +3,7 @@ import InicioList from "../pages/Inicio/containers/inicio-list";
 import LoginList from "../pages/login/container/login-list";
 import PerguntasList from "../pages/perguntas/container/perguntas-list";
 import CadastroList from "../pages/cadastro/container/cadastro-list";
+import SobreNosList from "../pages/sobre-nos/container/sobre-nos-list";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,12 @@ function Routes(){
                 component={PerguntasList}
                 options={{ headerShown: false}}
             />
+
+            <Stack.Screen
+                name="SobreNos"
+                component={SobreNosList}
+                options={{ headerShown: false}}
+            />  
         </Stack.Navigator>
     );
 }
