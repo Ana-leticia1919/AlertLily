@@ -5,11 +5,13 @@ import {
     StyleSheet,
 } from "react-native";
 import Topo from "../components/topo";
+import Conteudo from "../components/conteudo";
 
 function SobreNosList(props){
     return(
         <View style={styles.container}>
-            <Topo/>
+            <Topo style={styles.t1}/>
+            <Conteudo style={styles.t2}/>
         </View>
     );
 }
@@ -17,8 +19,9 @@ function SobreNosList(props){
 const styles = StyleSheet.create({
     container:{
         backgroundColor: "#E8CDF9",
-        height: "100%",
-        width: "100%",
+        // height: "100%",
+        // width: "100%",
+        flex: 1,
     },
 });
 

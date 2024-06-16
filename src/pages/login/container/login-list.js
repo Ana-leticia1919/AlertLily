@@ -90,8 +90,7 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems:"center",
         justifyContent:"center",
-        //flex: 1, 
-        height: 900,
+        flex: 1, 
         paddingTop: 80,  
     },
     wrapper:{
@@ -110,7 +109,7 @@ const styles = StyleSheet.create({
         height: 148,
         width: 178,
         position: 'absolute',
-        top: 193,
+        top: "23%",
         
     },
     input:{

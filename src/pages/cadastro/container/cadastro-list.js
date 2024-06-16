@@ -109,10 +109,6 @@ function CadastroList(props){
                     <Text style={styles.textBtn}>CADASTRAR-SE</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.wrapperLink} onPress={() => navigation.navigate("Perguntas")}>
-                    <Text style={styles.link}>ENTRAR</Text>
-                    <Image source={require('../icones/seta-direita.png')} style={styles.imgSeta}/>
-                </TouchableOpacity>
         </ImageBackground>
         
     );
@@ -123,8 +119,7 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems:"center",
         justifyContent:"center",
-        //flex: 1,
-        height: 900,
+        flex: 1,
         paddingTop: 80,
         
     },
@@ -136,7 +131,7 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         height: 48,
         width: 220,
-        elevation: 4,
+        elevation: 4, //sombra.
         margin: 20,
     },
     title:{

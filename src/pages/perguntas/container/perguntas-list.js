@@ -22,7 +22,7 @@ function PerguntasList(props){
                     <Text style={styles.textBtn}>Sobre nós</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.btn} onPress={props.onPress}>
+                <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("Ajuda")}>
                     <Text style={styles.textBtn}>Ajuda</Text>
                 </TouchableOpacity>
 
@@ -41,8 +41,7 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems:"center",
         justifyContent:"center",
-        //flex: 1,
-        height: 900,
+        flex: 1,
         paddingTop: 95, 
     },
     wrapper:{
@@ -61,7 +60,7 @@ const styles = StyleSheet.create({
         height: 148,
         width: 178,
         position: 'absolute',
-        top: 240,
+        top: "28%",
     },
     btn:{
         display: "flex",
