@@ -10,7 +10,7 @@ function Conteudo(props){
   
       return (
         <View style={styles.container}>
-      <ScrollView style={styles.teste}>
+      <ScrollView style={styles.scroll}>
         <View style={styles.wrapper}>
             <Text style={styles.text}>O Alert Lily é um projeto que busca garantir segurança e conforto em todos os momentos. Diariamente, quase 51 mil mulheres sofrerem violência no Brasil, o objetivo é que esses números diminuam, fazendo com mulheres se sintam tranquilas e confiantes ao sair de casa. </Text>
         </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
        color: "#2B0A88",
        fontSize: 20,
     },
-    teste:{
+    scroll:{
         padding: 10,
         marginBottom: "45%",
     },

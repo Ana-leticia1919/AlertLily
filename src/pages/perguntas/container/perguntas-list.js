@@ -26,7 +26,7 @@ function PerguntasList(props){
                     <Text style={styles.textBtn}>Ajuda</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.btnG} onPress={props.onPress}>
+                <TouchableOpacity style={styles.btnG} onPress={() => navigation.navigate("Perfil")}>
                     <Text style={styles.textBtn}>Iniciar configurações</Text>
                 </TouchableOpacity>
             </Animatable.View>

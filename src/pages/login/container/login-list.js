@@ -75,7 +75,7 @@ function LoginList(props){
                     <Link text="Esqueci a senha" link="Cadastro"/>
                 </View>
                 
-                <Button text="ENTRAR" link="Perguntas"/>
+                <Button text="ENTRAR" link="Perguntas"/> 
 
                 <Link text="Não tem uma conta? cadastre-se já." link="Cadastro"/>
             </Animatable.View>

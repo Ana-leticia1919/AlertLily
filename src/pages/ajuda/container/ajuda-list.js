@@ -8,48 +8,50 @@ import {
     ScrollView,
 } from "react-native";
 import Layout from '../components/ajuda-list-layout';
-import Page1 from "../components/ajuda-page-1";
-import Page2 from "../components/ajuda-page-2";
-import Page3 from "../components/ajuda-page-3";
-import Page4 from "../components/ajuda-page-4";
+import Conteudo from "../components/conteudo";
 
 function AjudaList(props){
     return(
         <Layout>
-            <View style={{ flex: 1 }}>
-                <ScrollView horizontal>
-                <Page1/>
-                
+            <View style={styles.container}>
+                <ScrollView horizontal style={styles.scroll}>
+                    <Conteudo
+                        title="Alerte que está em perigo aos seus contatos!"
+                        img={require("../icones/image1.png")}
+                        text="Ao apertar seu botão de conexão Bluetooth, seus contatos de emergência serão acionados e receberão uma mensgem de alerta."
+                        style={{marginLeft: 10,}}
+                    />
+                    <Conteudo
+                        title="Tenha pessoas de confiança como contato de emergência para qualquer situação!"
+                        img={require("../icones/image2.png")}
+                        text="Adicione um contato para que ele acompanhe sua jornada e lhe proporcione mais segurança."
+                    />
+                    <Conteudo
+                        title="O GPS de emergência é um sistema de localização que permite aos usuários enviar sinais de socorro em situações de emergência!"
+                        img={require("../icones/image3.png")}
+                        text="Ao acionar o GPS de emergência, as informações de localização são transmitidas para seus contatos pré-estabelecidos, agilizando a resposta em situações de perigo."
+                    />
+                    <Conteudo
+                        title="Crie o seu perfil, apenas seus contatos de confiança terão acesso"
+                        img={require("../icones/image4.png")}
+                        text="Adicione informações ao seu perfil para casos de emergência, você pode alterar a todo momento."
+                    />
                 </ScrollView>
+                <View style={styles.teste}>
+
+                </View>
             </View>
         </Layout>
     );
 }
 
 const styles = StyleSheet.create({
-    tudo:{
-        
-
+    container:{
+        flex: 1,
     },
-    
-    boneca1:{
-        width:"100%",
-        marginTop: 100
+    scroll:{
+        width: "100%",
     },
-    texto:{
-        color:"#510A88",
-        fontWeight: "bold",
-        fontSize: 20,
-        marginLeft: 20,
-        marginBottom: 0
-        
-    }
-
-
-
-
-
-
 })
 
 export default AjudaList;

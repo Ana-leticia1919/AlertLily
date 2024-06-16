@@ -5,6 +5,7 @@ import PerguntasList from "../pages/perguntas/container/perguntas-list";
 import CadastroList from "../pages/cadastro/container/cadastro-list";
 import SobreNosList from "../pages/sobre-nos/container/sobre-nos-list";
 import AjudaList from "../pages/ajuda/container/ajuda-list";
+import PerfilList from "../pages/perfil/container/perfil-list";
 
 const Stack = createNativeStackNavigator();
 
@@ -44,6 +45,12 @@ function Routes(){
             <Stack.Screen
                 name="Ajuda"
                 component={AjudaList}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="Perfil"
+                component={PerfilList}
                 options={{ headerShown: false}}
             />
         </Stack.Navigator>

@@ -6,23 +6,23 @@ import {
     StyleSheet,
 } from "react-native";
 
-function Page1(props){
+function Conteudo(props){
     return(
             <View style={styles.container}>
 
                 <View style={styles.wrapperTitle}>
                     <Text style={styles.title}>
-                    Alerte que está em perigo aos seus contatos!
+                    {props.title}
                     </Text>
                 </View>
                 
                 <View style={styles.wrapperImg}>
-                    <Image style={styles.img} source={require("../icones/image1.png")} />
+                    <Image style={styles.img} source={props.img} />
                 </View>
 
                 <View style={styles.wrapperText}>
                     <Text style={styles.text}>
-                    Ao apertar seu botão de conexão Bluetooth, seus contatos de emergência serão acionados e receberão uma mensgem de alerta.
+                    {props.text}
                     </Text>
                 </View>
             </View>
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     container:{
         justifyContent: "center",
         alignItems: "center",
-        width: "30%",
+        width: "7.5%",
+        margin: 20,
     },
     wrapperTitle:{
         justifyContent: "center",
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     },
     img:{
         width: 412,
-        height: 420    
+        height: 420,    
     },
     wrapperText:{
         justifyContent: "center",
@@ -66,4 +67,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Page1;
+export default Conteudo;
