@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     linkText:{
         fontSize: 15,
         color: "#510A88",
-        fontWeight: "100",
+        fontWeight: "600",
     },
     logo:{
         width: 66,

@@ -30,7 +30,7 @@ function AjudaListLayout(props){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: "#F8FEFE",
+        backgroundColor: "#FDFDFD",
         flex: 1,
         // height: "100%",
     },
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         fontSize: 15,
         color: "#510A88",
-        fontWeight: "300",
+        fontWeight: "600",
         marginTop: 20,
     },
     seta:{

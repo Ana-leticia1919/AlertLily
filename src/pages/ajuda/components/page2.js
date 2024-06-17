@@ -6,7 +6,7 @@ import {
     StyleSheet,
 } from "react-native";
 
-function Conteudo(props){
+function Page2(props){
     return(
             <View style={styles.container}>
 
@@ -33,13 +33,14 @@ const styles = StyleSheet.create({
     container:{
         justifyContent: "center",
         alignItems: "center",
-        width: "7.5%",
-        margin: 20,
+        width: "100%",
+        marginTop: 50,
     },
     wrapperTitle:{
         justifyContent: "center",
         alignItems: "center",
         padding: 10,
+        paddingBottom:0,
     },
     title:{
         color:"#510A88",
@@ -48,23 +49,26 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     wrapperImg:{
-       margin: 10,     
+       margin: 0,
+       position: "relative",     
     },
     img:{
-        width: 412,
-        height: 420,    
+        width: 390,
+        height: 350,    
+        position: "relative",
     },
     wrapperText:{
         justifyContent: "center",
         alignItems: "center",
         padding: 10,
+        paddingTop: 0,
     },
     text:{
         color:"#510A88",
-        fontWeight: "400",
+        fontWeight: "500",
         fontSize: 18,
         textAlign: "center",
     },
 });
 
-export default Conteudo;
+export default Page2;
